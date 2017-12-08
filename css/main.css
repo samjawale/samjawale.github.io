@@ -1,75 +1,14 @@
-body
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar 
 {
-    /*background-color: black;*/
-	color: white;
-	font-size: larger;
+	margin-bottom: 0;
+  	border-radius: 0;
 }
 
-#body_header
+/* Add a gray background color and some padding to the footer */
+footer 
 {
-	background-color: white;
-	height: 100px;
+	background-color: #f2f2f2;
+  	padding: 25px;
 }
 
-#header_title
-{
-	float: left !important;
-	padding-left: 20px;
-	color: black;
-	font-size: larger;
-	font-weight: 900;
-}
-
-#header_nav_section
-{
-	float: right !important;
-}
-
-.header_nav_list_item
-{
-	position: relative;
-	list-style: none;
-	float: left;
-	padding: 20px;
-}
-
-.header_nav_list_item_a
-{
-	line-height: 45px;
-    font-weight: 700;
-    font-size: 15px;
-    text-transform: uppercase;
-	text-decoration: none;
-	position: relative;
-    display: block;
-}
-
-#body_main
-{
-	background: black url("../images/bg1.png") no-repeat fixed center;
-	background-size: 100% 100%;
-	/*height: 1000px;*/
-}
-
-#login_table
-{
-	margin: auto;
-    width: fit-content;
-	border: none;
-	text-align: center;
-}
-
-#login_table td
-{
-	padding: 2%;
-}
-
-#login_table td, input
-{
-	font-size: xx-large;
-}
-
-input
-{
-	color: black;
-}
