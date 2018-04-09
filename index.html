@@ -29,8 +29,14 @@
 		  
 		  $(document).ready(function(){
 			  $("#imgProfilePic").mouseover(function(){
-				    ga('send', 'event', 'Photo', 'hover', 'Photo hover');
+				    //ga('send', 'event', 'Photo', 'hover', 'Photo hover');
 				    //alert("HI");
+					  ga('send', {
+						  hitType: 'event',
+						  eventCategory: 'Photo',
+						  eventAction: 'Hover',
+						  eventLabel: 'Profile Picture'
+						});
 				});
 		  });
 		</script>
