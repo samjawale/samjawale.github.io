@@ -21,24 +21,28 @@
 			ga('create', 'UA-117151101-1', 'auto');
 			ga('send', 'pageview');
 			
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-		
-		  gtag('config', 'UA-117257760-1');
-		  
-		  $(document).ready(function(){
-			  $("#imgProfilePic").mouseover(function(){
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'UA-117257760-1');
+			  
+			$(document).ready(function(){
+				$("#imgProfilePic").mouseover(function(){
 				    //ga('send', 'event', 'Photo', 'hover', 'Photo hover');
 				    //alert("HI");
-					  ga('send', {
-						  hitType: 'event',
-						  eventCategory: 'Photo',
-						  eventAction: 'Hover',
-						  eventLabel: 'Profile Picture'
-						});
+				    /*
+				  	ga('send', {
+						hitType: 'event',
+						eventCategory: 'Photo',
+						eventAction: 'Hover',
+						eventLabel: 'Profile Picture'
+					});
+				    */
+					ga('send', 'event', 'Photo', 'hover');
+				    console.log('Hover');
 				});
-		  });
+			});
 		</script>
 		
 	</head>
