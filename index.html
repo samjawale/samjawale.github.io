@@ -39,10 +39,44 @@
 						eventLabel: 'Profile Picture'
 					});
 				    */
-					ga('send', 'event', 'Photo', 'hover');
-				    console.log('Hover');
+				    
+				    var user=getCookie("username");
+				    if (user == "") {
+				    	var x = Math.floor(Math.random() * 100000000) + 100000000;
+				    	var y = Math.floor(Math.random() * 100000000) + 100000000;
+				       user = x+'.'+y;
+				       if (user != "" && user != null) {
+				           setCookie("username", user, 30);
+				       }
+				    }
+				    ga('send', 'event', 'Photo', 'hover', user+'|12:00');
+			    	console.log(user+': Hover');
+					
+					
 				});
 			});
+			
+			function setCookie(cname, cvalue, exdays) {
+			    var d = new Date();
+			    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+			    var expires = "expires="+d.toUTCString();
+			    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+
+			function getCookie(cname) {
+			    var name = cname + "=";
+			    var ca = document.cookie.split(';');
+			    for(var i = 0; i < ca.length; i++) {
+			        var c = ca[i];
+			        while (c.charAt(0) == ' ') {
+			            c = c.substring(1);
+			        }
+			        if (c.indexOf(name) == 0) {
+			            return c.substring(name.length, c.length);
+			        }
+			    }
+			    return "";
+			}
 		</script>
 		
 	</head>
