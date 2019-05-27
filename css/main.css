@@ -1,18 +1,113 @@
-/* Remove the navbar's default margin-bottom and rounded borders */ 
-.navbar 
-{
-	margin-bottom: 0;
-  	border-radius: 0;
+/* Remove the navbar's default margin-bottom and rounded borders */
+#main_navbar {
+  margin-bottom: 1em;
+  padding: 2em;
+}
+
+#main_name {
+  font-size: 4em;
+}
+
+#main_tab_list {
+  font-size: 1.5em;
+}
+
+.tab-pane {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.tab-content {
+  /*border: 2px solid black;*/
+  /*border-radius: 1em;*/
+  padding: 2em;
+  margin-bottom: 1em;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+#imgProfilePic {
+  padding-top: 10%;
+}
+
+#gallery_navbar {
+  margin: 0;
+}
+
+#gallery_tab_list {
+  margin: 0;
+}
+
+#contact_btn {
+  font-size: 1.5em;
+  height: 4em;
+}
+
+#contact_badge {
+  font-size: 0.7em;
 }
 
 /* Add a gray background color and some padding to the footer */
-footer 
-{
-	background-color: #f2f2f2;
-  	padding: 25px;
+footer {
+  padding: 1em;
+  font-size: 0.8em;
+  background-color: #222222;
+  color: white;
 }
 
-.top-pad
-{
-	padding-top: 25px;
+#footer_text {
+  margin: 0;
+}
+
+#large_display_tag {
+  display: block;
+}
+
+#small_display_tag {
+  display: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+#profile_btn {
+  margin: 1em;
+}
+
+#linkedin_badge {
+  padding-left: 10%;
+}
+
+@media only screen and (max-width: 600px) {
+  #main_navbar {
+    margin-bottom: 1em;
+    padding: 0.5em;
+  }
+
+  #main_name {
+    font-size: 2em;
+  }
+
+  #main_tab_list {
+    font-size: 1em;
+  }
+
+  #imgProfilePic {
+    padding-top: 0;
+  }
+
+  #large_display_tag {
+    display: none;
+  }
+
+  #small_display_tag {
+    display: block;
+  }
+
+  #linkedin_badge {
+    padding-left: 0;
+  }
 }
