@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BrowserRouter } from "react-router-dom";
 import { DefaultTheme, ThemeProvider } from "styled-components";
 import GlobalStyle from "./components/GlobalStyle";
 import AppLayout from "./components/AppLayout";
@@ -9,16 +10,18 @@ const App = () => {
   const [currentTheme, setCurrentTheme] = useState<DefaultTheme>(lightTheme);
 
   return (
-    <ThemeProvider theme={currentTheme}>
-      <GlobalStyle {...currentTheme} />
-      <AppLayout
-        toggleTheme={() =>
-          setCurrentTheme(
-            currentTheme.kind === ThemeKind.LIGHT ? darkTheme : lightTheme
-          )
-        }
-      />
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={currentTheme}>
+        <GlobalStyle {...currentTheme} />
+        <AppLayout
+          toggleTheme={() =>
+            setCurrentTheme(
+              currentTheme.kind === ThemeKind.LIGHT ? darkTheme : lightTheme
+            )
+          }
+        />
+      </ThemeProvider>
+    </BrowserRouter>
   );
 };
 
