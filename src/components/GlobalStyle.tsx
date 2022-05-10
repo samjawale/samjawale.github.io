@@ -16,10 +16,10 @@ const GlobalStyle = createGlobalStyle<DefaultTheme>`
     font-size: 14px;
     line-height: 22px;
     overflow: hidden;
-    color: ${(theme) => theme.color.primary};
-    font-family: ${(theme) => theme.fontFamily};
-    background-color: ${(theme) => theme.color.background};
-    border-color: ${(theme) => theme.color.border};
+    color: ${theme => theme.color.primary};
+    font-family: ${theme => theme.fontFamily};
+    background-color: ${theme => theme.color.background};
+    border-color: ${theme => theme.color.border};
   }
 `;
 

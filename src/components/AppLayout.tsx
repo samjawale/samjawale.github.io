@@ -17,12 +17,12 @@ const StyledHeader = styled(Header)`
   background: #0099ff;
 `;
 const StyledTitle = styled(Title)`
-  color: ${(props) => props.theme.color.secondary} !important;
+  color: ${props => props.theme.color.secondary} !important;
   margin: 0 !important;
 `;
 
 const StyledContent = styled(Content)`
-  background: ${(props) => props.theme.color.background};
+  background: ${props => props.theme.color.background};
 `;
 
 type Props = {
@@ -47,20 +47,20 @@ const AppLayout = ({ toggleTheme }: Props) => {
                   key: "/",
                   label: "Home",
                   icon: <HomeOutlined />,
-                  onClick: () => navigate(`/`),
+                  onClick: () => navigate(`/`)
                 },
                 {
                   key: "about",
                   label: "About",
                   icon: <ProfileOutlined />,
-                  onClick: () => navigate(`about`),
+                  onClick: () => navigate(`about`)
                 },
                 {
                   key: "projects",
                   label: "Projects",
                   icon: <CodeOutlined />,
-                  onClick: () => navigate(`projects`),
-                },
+                  onClick: () => navigate(`projects`)
+                }
               ]}
             />
           </Col>

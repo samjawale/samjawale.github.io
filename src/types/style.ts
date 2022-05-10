@@ -1,6 +1,6 @@
 export enum ThemeKind {
   LIGHT,
-  DARK,
+  DARK
 }
 
 export interface CustomTheme {

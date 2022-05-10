@@ -8,8 +8,8 @@ export const lightTheme: DefaultTheme = {
     background: "#ffffff",
     border: "grey",
     primary: "#000",
-    secondary: "#fff",
-  },
+    secondary: "#fff"
+  }
 };
 
 export const darkTheme: DefaultTheme = {
@@ -19,6 +19,6 @@ export const darkTheme: DefaultTheme = {
     ...lightTheme.color,
     background: "#000000",
     primary: "#fff",
-    secondary: "#000",
-  },
+    secondary: "#000"
+  }
 };
