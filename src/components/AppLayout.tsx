@@ -1,10 +1,18 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { Col, Layout, Menu, Row, Switch, Typography } from "antd";
-import { CodeOutlined, HomeOutlined, ProfileOutlined } from "@ant-design/icons";
+import {
+  CodeOutlined,
+  FilePdfOutlined,
+  HomeOutlined,
+  UserOutlined
+} from "@ant-design/icons";
 import Home from "./Home";
 import About from "./About";
 import Projects from "./Projects";
+import Files from "./Files";
+import Page404 from "./Page404";
+import { PATH } from "../helpers/routes";
 
 const { Content, Header } = Layout;
 const { Title } = Typography;
@@ -26,56 +34,68 @@ const StyledContent = styled(Content)`
 `;
 
 type Props = {
+  isDarkTheme: boolean;
   toggleTheme: () => void;
 };
-const AppLayout = ({ toggleTheme }: Props) => {
+const AppLayout = ({ isDarkTheme, toggleTheme }: Props) => {
   const navigate = useNavigate();
 
   return (
     <StyledLayout>
       <StyledHeader>
         <Row>
-          <Col span={8} style={{ display: "flex", alignItems: "center" }}>
+          <Col span={5} style={{ display: "flex", alignItems: "center" }}>
             <StyledTitle level={2}>Sam's Portfolio</StyledTitle>
           </Col>
-          <Col span={8} offset={8}>
+          <Col span={10} offset={6}>
             <Menu
               mode="horizontal"
-              defaultSelectedKeys={["/"]}
+              defaultSelectedKeys={[PATH.HOME]}
+              theme={isDarkTheme ? "dark" : "light"}
               items={[
                 {
-                  key: "/",
+                  key: PATH.HOME,
                   label: "Home",
                   icon: <HomeOutlined />,
-                  onClick: () => navigate(`/`)
+                  onClick: () => navigate(PATH.HOME)
                 },
                 {
-                  key: "about",
+                  key: PATH.ABOUT,
                   label: "About",
-                  icon: <ProfileOutlined />,
-                  onClick: () => navigate(`about`)
+                  icon: <UserOutlined />,
+                  onClick: () => navigate(PATH.ABOUT)
                 },
                 {
-                  key: "projects",
+                  key: PATH.PROJECTS,
                   label: "Projects",
                   icon: <CodeOutlined />,
-                  onClick: () => navigate(`projects`)
+                  onClick: () => navigate(PATH.PROJECTS)
+                },
+                {
+                  key: PATH.FILES,
+                  label: "Files",
+                  icon: <FilePdfOutlined />,
+                  onClick: () => navigate(PATH.FILES)
                 }
               ]}
+            />
+          </Col>
+          <Col offset={1}>
+            <Switch
+              checkedChildren="Light"
+              unCheckedChildren="Dark"
+              onClick={toggleTheme}
             />
           </Col>
         </Row>
       </StyledHeader>
       <StyledContent>
-        <Switch
-          checkedChildren="Light"
-          unCheckedChildren="Dark"
-          onClick={toggleTheme}
-        />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="projects" element={<Projects />} />
+          <Route path={PATH.HOME} element={<Home />} />
+          <Route path={PATH.ABOUT} element={<About />} />
+          <Route path={PATH.PROJECTS} element={<Projects />} />
+          <Route path={PATH.FILES} element={<Files />} />
+          <Route path="*" element={<Page404 />} />
         </Routes>
       </StyledContent>
     </StyledLayout>

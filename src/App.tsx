@@ -14,6 +14,7 @@ const App = () => {
       <ThemeProvider theme={currentTheme}>
         <GlobalStyle {...currentTheme} />
         <AppLayout
+          isDarkTheme={currentTheme.kind === ThemeKind.DARK}
           toggleTheme={() =>
             setCurrentTheme(
               currentTheme.kind === ThemeKind.LIGHT ? darkTheme : lightTheme
