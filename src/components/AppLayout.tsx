@@ -22,7 +22,7 @@ const StyledLayout = styled(Layout)`
 `;
 
 const StyledHeader = styled(Header)`
-  background: #0099ff;
+  background: #1890ff;
 `;
 const StyledTitle = styled(Title)`
   color: ${props => props.theme.color.secondary} !important;
