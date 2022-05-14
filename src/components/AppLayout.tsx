@@ -28,6 +28,7 @@ const StyledTitle = styled(Title)`
   color: ${props => props.theme.color.secondary} !important;
   margin: 0 !important;
 `;
+const StyledSwitch = styled(Switch)``;
 
 const StyledContent = styled(Content)`
   background: ${props => props.theme.color.background};
@@ -81,7 +82,7 @@ const AppLayout = ({ isDarkTheme, toggleTheme }: Props) => {
             />
           </Col>
           <Col offset={1}>
-            <Switch
+            <StyledSwitch
               checkedChildren="Light"
               unCheckedChildren="Dark"
               onClick={toggleTheme}
