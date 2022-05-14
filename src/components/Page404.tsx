@@ -18,7 +18,7 @@ const StyledTitle = styled(Title)`
 `;
 
 const StyledButton = styled(Button)`
-  color: ${props => props.theme.color.primary} !important;
+  /* color: ${props => props.theme.color.primary} !important; */
 `;
 
 const Page404 = () => {
