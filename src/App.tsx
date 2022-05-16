@@ -15,11 +15,7 @@ const App = () => {
         <GlobalStyle {...currentTheme} />
         <AppLayout
           isDarkTheme={currentTheme.kind === ThemeKind.DARK}
-          toggleTheme={() =>
-            setCurrentTheme(
-              currentTheme.kind === ThemeKind.LIGHT ? darkTheme : lightTheme
-            )
-          }
+          toggleTheme={() => setCurrentTheme(currentTheme.kind === ThemeKind.LIGHT ? darkTheme : lightTheme)}
         />
       </ThemeProvider>
     </BrowserRouter>

@@ -1,18 +1,16 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { Col, Layout, Menu, Row, Switch, Typography } from "antd";
-import {
-  CodeOutlined,
-  FilePdfOutlined,
-  HomeOutlined,
-  UserOutlined
-} from "@ant-design/icons";
+import { CodeOutlined, FilePdfOutlined, HomeOutlined, UserOutlined } from "@ant-design/icons";
 import Home from "./Home";
 import About from "./About";
 import Projects from "./Projects";
 import Files from "./Files";
 import Page404 from "./Page404";
 import { PATH } from "../helpers/routes";
+import lightImg from "../art/up-down-lines-light-mode.jpeg";
+import darkImg from "../art/up-down-lines-dark-mode.jpeg";
+import { ThemeKind } from "../types/style";
 
 const { Content, Header } = Layout;
 const { Title } = Typography;
@@ -31,7 +29,10 @@ const StyledTitle = styled(Title)`
 const StyledSwitch = styled(Switch)``;
 
 const StyledContent = styled(Content)`
+  padding: 0 100px;
   background: ${props => props.theme.color.background};
+  background-image: url(${props => (props.theme.kind === ThemeKind.LIGHT ? lightImg : darkImg)});
+  background-size: cover;
 `;
 
 type Props = {
@@ -82,11 +83,7 @@ const AppLayout = ({ isDarkTheme, toggleTheme }: Props) => {
             />
           </Col>
           <Col offset={1}>
-            <StyledSwitch
-              checkedChildren="Light"
-              unCheckedChildren="Dark"
-              onClick={toggleTheme}
-            />
+            <StyledSwitch checkedChildren="Light" unCheckedChildren="Dark" onClick={toggleTheme} />
           </Col>
         </Row>
       </StyledHeader>

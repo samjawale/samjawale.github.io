@@ -26,15 +26,9 @@ const Page404 = () => {
 
   return (
     <StyledFrame direction="vertical">
-      <StyledTitle level={4}>
-        Uh-oh! The page you're looking for does not exist.
-      </StyledTitle>
+      <StyledTitle level={4}>Uh-oh! The page you're looking for does not exist.</StyledTitle>
       <StyledTitle>Page 404</StyledTitle>
-      <StyledButton
-        type="primary"
-        size="large"
-        onClick={() => navigate(PATH.HOME)}
-      >
+      <StyledButton type="primary" size="large" onClick={() => navigate(PATH.HOME)}>
         Back to home <HomeOutlined />
       </StyledButton>
     </StyledFrame>
