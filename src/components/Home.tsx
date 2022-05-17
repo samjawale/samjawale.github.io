@@ -4,10 +4,11 @@ import { Typography } from "antd";
 const { Title } = Typography;
 
 const StyledQuote = styled(Title)`
-  color: ${props => props.theme.color.primary} !important;
+  color: ${props => props.theme.color.font.primary} !important;
+  margin-top: 15%;
 `;
 const StyledPre = styled.pre`
-  background: ${props => props.theme.color.background} !important;
+  background: ${props => props.theme.color.background.secondary} !important;
   font-size: 0.6em;
   text-align: center;
 `;

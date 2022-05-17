@@ -3,13 +3,17 @@ export enum ThemeKind {
   DARK
 }
 
+interface Color {
+  primary: string;
+  secondary: string;
+}
+
 export interface CustomTheme {
   kind: ThemeKind;
   fontFamily: string;
   color: {
-    background: string;
-    border: string;
-    primary: string;
-    secondary: string;
+    background: Color;
+    border: Color;
+    font: Color;
   };
 }

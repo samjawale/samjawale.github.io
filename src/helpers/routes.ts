@@ -1,6 +1,6 @@
 export enum PATH {
   HOME = "/",
-  ABOUT = "abbout",
+  ABOUT = "about",
   PROJECTS = "projects",
   FILES = "files"
 }

@@ -8,8 +8,8 @@ import Projects from "./Projects";
 import Files from "./Files";
 import Page404 from "./Page404";
 import { PATH } from "../helpers/routes";
-import lightImg from "../art/up-down-lines-light-mode.jpeg";
-import darkImg from "../art/up-down-lines-dark-mode.jpeg";
+import lightImg from "../art/light-bg.jpeg";
+import darkImg from "../art/dark-bg.jpeg";
 import { ThemeKind } from "../types/style";
 
 const { Content, Header } = Layout;
@@ -23,14 +23,14 @@ const StyledHeader = styled(Header)`
   background: #1890ff;
 `;
 const StyledTitle = styled(Title)`
-  color: ${props => props.theme.color.secondary} !important;
+  color: ${props => props.theme.color.font.secondary} !important;
   margin: 0 !important;
 `;
 const StyledSwitch = styled(Switch)``;
 
 const StyledContent = styled(Content)`
   padding: 0 100px;
-  background: ${props => props.theme.color.background};
+  background: ${props => props.theme.color.background.primary};
   background-image: url(${props => (props.theme.kind === ThemeKind.LIGHT ? lightImg : darkImg)});
   background-size: cover;
 `;

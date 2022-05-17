@@ -14,12 +14,10 @@ const StyledFrame = styled(Space)`
 `;
 
 const StyledTitle = styled(Title)`
-  color: ${props => props.theme.color.primary} !important;
+  color: ${props => props.theme.color.font.primary} !important;
 `;
 
-const StyledButton = styled(Button)`
-  /* color: ${props => props.theme.color.primary} !important; */
-`;
+const StyledButton = styled(Button)``;
 
 const Page404 = () => {
   const navigate = useNavigate();
