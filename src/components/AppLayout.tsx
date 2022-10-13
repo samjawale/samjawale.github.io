@@ -1,6 +1,7 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { Col, Layout, Menu, Row, Switch, Typography } from "antd";
+import { Button, Col, Layout, Menu, Row, Space, Switch, Typography } from "antd";
+import { GithubOutlined, LinkedinOutlined, YoutubeOutlined } from "@ant-design/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faFile, faHome, faMoon, faSun, faUser } from "@fortawesome/free-solid-svg-icons";
 import Home from "./Home";
@@ -44,12 +45,27 @@ const AppLayout = ({ isDarkTheme, toggleTheme }: Props) => {
       <StyledHeader>
         <Row>
           <Col span={10}>
-            <StyledSwitch
-              checked={isDarkTheme}
-              checkedChildren={<FontAwesomeIcon icon={faMoon} />}
-              unCheckedChildren={<FontAwesomeIcon icon={faSun} />}
-              onClick={toggleTheme}
-            />
+            <Space>
+              <StyledSwitch
+                checked={isDarkTheme}
+                checkedChildren={<FontAwesomeIcon icon={faMoon} />}
+                unCheckedChildren={<FontAwesomeIcon icon={faSun} />}
+                onClick={toggleTheme}
+              />
+              <Button
+                shape="circle"
+                icon={<LinkedinOutlined />}
+                href="https://www.linkedin.com/in/jawalesumit/"
+                target="_blank"
+              />
+              <Button shape="circle" icon={<GithubOutlined />} href="https://github.com/samjawale" target="_blank" />
+              <Button
+                shape="circle"
+                icon={<YoutubeOutlined />}
+                href="https://www.youtube.com/channel/UCF60X5gHAPTkvMb5XjIaHrA"
+                target="_blank"
+              />
+            </Space>
           </Col>
           <Col span={4} style={{ display: "flex", alignItems: "center" }}>
             <StyledTitle level={2}>Sam's Portfolio</StyledTitle>
