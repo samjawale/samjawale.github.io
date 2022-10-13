@@ -1,7 +1,8 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { Col, Layout, Menu, Row, Switch, Typography } from "antd";
-import { CodeOutlined, FilePdfOutlined, HomeOutlined, UserOutlined } from "@ant-design/icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCode, faFile, faHome, faMoon, faSun, faUser } from "@fortawesome/free-solid-svg-icons";
 import Home from "./Home";
 import About from "./About";
 import Projects from "./Projects";
@@ -43,7 +44,12 @@ const AppLayout = ({ isDarkTheme, toggleTheme }: Props) => {
       <StyledHeader>
         <Row>
           <Col span={10}>
-            <StyledSwitch checkedChildren="Light" unCheckedChildren="Dark" onClick={toggleTheme} />
+            <StyledSwitch
+              checked={isDarkTheme}
+              checkedChildren={<FontAwesomeIcon icon={faMoon} />}
+              unCheckedChildren={<FontAwesomeIcon icon={faSun} />}
+              onClick={toggleTheme}
+            />
           </Col>
           <Col span={4} style={{ display: "flex", alignItems: "center" }}>
             <StyledTitle level={2}>Sam's Portfolio</StyledTitle>
@@ -57,25 +63,25 @@ const AppLayout = ({ isDarkTheme, toggleTheme }: Props) => {
                 {
                   key: PATH.HOME,
                   label: "Home",
-                  icon: <HomeOutlined />,
+                  icon: <FontAwesomeIcon icon={faHome} />,
                   onClick: () => navigate(PATH.HOME)
                 },
                 {
                   key: PATH.ABOUT,
                   label: "About",
-                  icon: <UserOutlined />,
+                  icon: <FontAwesomeIcon icon={faUser} />,
                   onClick: () => navigate(PATH.ABOUT)
                 },
                 {
                   key: PATH.PROJECTS,
                   label: "Projects",
-                  icon: <CodeOutlined />,
+                  icon: <FontAwesomeIcon icon={faCode} />,
                   onClick: () => navigate(PATH.PROJECTS)
                 },
                 {
                   key: PATH.FILES,
                   label: "Files",
-                  icon: <FilePdfOutlined />,
+                  icon: <FontAwesomeIcon icon={faFile} />,
                   onClick: () => navigate(PATH.FILES)
                 }
               ]}
