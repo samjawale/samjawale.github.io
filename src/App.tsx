@@ -4,21 +4,23 @@ import { DefaultTheme, ThemeProvider } from "styled-components";
 import GlobalStyle from "./components/GlobalStyle";
 import AppLayout from "./components/AppLayout";
 import { darkTheme, lightTheme } from "./helpers/style";
+import useThemeDetector from "./hooks/useThemeDetector";
 import { ThemeKind } from "./types/style";
 
 const App = () => {
-  const [currentTheme, setCurrentTheme] = useState<DefaultTheme>(lightTheme);
+  const isSystemThemeDark = useThemeDetector();
+  const [currentTheme, setCurrentTheme] = useState<DefaultTheme>(isSystemThemeDark ? darkTheme : lightTheme);
 
   return (
-    <BrowserRouter>
-      <ThemeProvider theme={currentTheme}>
+    <ThemeProvider theme={currentTheme}>
+      <BrowserRouter>
         <GlobalStyle {...currentTheme} />
         <AppLayout
           isDarkTheme={currentTheme.kind === ThemeKind.DARK}
-          toggleTheme={() => setCurrentTheme(currentTheme.kind === ThemeKind.LIGHT ? darkTheme : lightTheme)}
+          toggleTheme={() => setCurrentTheme(currentTheme.kind === ThemeKind.DARK ? lightTheme : darkTheme)}
         />
-      </ThemeProvider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 };
 
