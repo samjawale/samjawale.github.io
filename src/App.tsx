@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { DefaultTheme, ThemeProvider } from "styled-components";
-import GlobalStyle from "./components/GlobalStyle";
-import AppLayout from "./components/AppLayout";
-import { darkTheme, lightTheme } from "./helpers/style";
-import useThemeDetector from "./hooks/useThemeDetector";
-import { ThemeKind } from "./types/style";
+import GlobalStyle from "@/components/styles/GlobalStyle";
+import AppLayout from "@/components/AppLayout";
+import { darkTheme, lightTheme } from "@/helpers/style";
+import useThemeDetector from "@/hooks/useThemeDetector";
+import { ThemeKind } from "@/types/style";
 
 const App = () => {
   const isSystemThemeDark = useThemeDetector();

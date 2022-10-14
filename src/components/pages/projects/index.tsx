@@ -1,4 +1,4 @@
-import { Company } from "../types/data";
+import { Company } from "@/types/data";
 
 const data: Array<Company> = [];
 

@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { Button, Space, Typography } from "antd";
 import { HomeOutlined } from "@ant-design/icons";
-import { PATH } from "../helpers/routes";
+import { PATH } from "@/helpers/routes";
 
 const { Title } = Typography;
 
