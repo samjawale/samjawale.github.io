@@ -1,9 +1,3 @@
-import { Company } from "@/types/data";
-
-const data: Array<Company> = [];
-
-const Projects = () => {
-  return <div> Projects</div>;
-};
+import Projects from "./Projects";
 
 export default Projects;

@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import { DefaultTheme, ThemeProvider } from "styled-components";
 import GlobalStyle from "@/components/styles/GlobalStyle";
 import AppLayout from "@/components/AppLayout";
-import { darkTheme, lightTheme } from "@/helpers/style";
+import { darkTheme, lightTheme } from "@/helpers/styles";
 import useThemeDetector from "@/hooks/useThemeDetector";
 import { ThemeKind } from "@/types/style";
 
