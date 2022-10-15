@@ -11,12 +11,12 @@ import { PATH } from "@/helpers/routes";
 
 const StyledLayout = styled(Layout)`
   height: 100vh;
+  background: ${props => props.theme.color.background.primary};
 `;
 
 const StyledContent = styled(Layout.Content)`
-  padding: 0 100px;
+  margin: auto;
   background: ${props => props.theme.color.background.primary};
-  background-size: cover;
 `;
 
 type Props = {
