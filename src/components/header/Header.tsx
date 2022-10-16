@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { Col, Layout, Menu, Row, Space, Switch, Typography } from "antd";
 import Icon from "@ant-design/icons";
@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faFile, faHome, faMoon, faSun, faUser, faUserTie } from "@fortawesome/free-solid-svg-icons";
 import { ReactComponent as BatmanSvg } from "@/art/icons/batman.svg";
 import { GithubProfileBtn, LinkedInProfileBtn, YoutubeProfileBtn } from "@/components/header/ProfileButton";
-import { PATH } from "@/helpers/routes";
+import { PATH } from "@/constants/routes";
 
 const { Title } = Typography;
 
@@ -25,6 +25,7 @@ type Props = {
   toggleTheme: () => void;
 };
 const Header = ({ isDarkTheme, toggleTheme }: Props) => {
+  const location = useLocation();
   const navigate = useNavigate();
 
   const headerLogo = isDarkTheme ? (
@@ -64,6 +65,7 @@ const Header = ({ isDarkTheme, toggleTheme }: Props) => {
           <Menu
             mode="horizontal"
             defaultSelectedKeys={[PATH.HOME]}
+            selectedKeys={[location.pathname]}
             theme={isDarkTheme ? "dark" : "light"}
             style={{ justifyContent: "end", border: "none" }}
             items={[

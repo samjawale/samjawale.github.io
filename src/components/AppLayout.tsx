@@ -7,7 +7,7 @@ import About from "@/components/pages/about";
 import Projects from "@/components/pages/projects";
 import Files from "@/components/pages/files";
 import Page404 from "@/components/pages/error/Page404";
-import { PATH } from "@/helpers/routes";
+import { PATH } from "@/constants/routes";
 
 const StyledLayout = styled(Layout)`
   height: 100vh;
@@ -15,7 +15,8 @@ const StyledLayout = styled(Layout)`
 `;
 
 const StyledContent = styled(Layout.Content)`
-  margin: auto;
+  /* margin: auto; */
+  padding: 50px;
   overflow: auto;
   background: ${props => props.theme.color.background.primary};
 `;

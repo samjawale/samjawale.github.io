@@ -7,7 +7,7 @@ export const lightTheme: DefaultTheme = {
   color: {
     background: { primary: "#ffffff", secondary: "#808080" },
     border: { primary: "rgba(0, 0, 0, 0.85)", secondary: "rgba(0, 0, 0, 0.85)" },
-    font: { primary: "rgba(0, 0, 0, 0.85)", secondary: "#ffffff" }
+    font: { primary: "rgba(0, 0, 0, 0.85)", secondary: "#a9abaa" }
   }
 };
 
@@ -18,6 +18,6 @@ export const darkTheme: DefaultTheme = {
     ...lightTheme.color,
     background: { primary: "#001529", secondary: "#808080" },
     border: { primary: "#ffffff", secondary: "#ffffff" },
-    font: { primary: "#ffffff", secondary: "#ffffff" }
+    font: { primary: "#ffffff", secondary: "#a9abaa" }
   }
 };

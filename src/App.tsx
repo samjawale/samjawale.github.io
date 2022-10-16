@@ -5,7 +5,7 @@ import { DefaultTheme, ThemeProvider } from "styled-components";
 import GlobalStyle from "@/components/styles/GlobalStyle";
 import AppLayout from "@/components/AppLayout";
 import Page500 from "@/components/pages/error/Page500";
-import { darkTheme, lightTheme } from "@/helpers/styles";
+import { darkTheme, lightTheme } from "@/constants/styles";
 import useThemeDetector from "@/hooks/useThemeDetector";
 import { ThemeKind } from "@/types/style";
 
