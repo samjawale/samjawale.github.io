@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "antd/dist/antd.css";
+import "@ant-design/flowchart/dist/index.css";
 import App from "@/App";
 import reportWebVitals from "@/reportWebVitals";
 
