@@ -38,7 +38,7 @@ const Header = ({ isDarkTheme, toggleTheme }: Props) => {
     <StyledHeader>
       <Row justify="space-between">
         <Col span={8}>
-          <Space>
+          <Space size={16}>
             <StyledSwitch
               checked={isDarkTheme}
               checkedChildren={<FontAwesomeIcon icon={faMoon} />}
