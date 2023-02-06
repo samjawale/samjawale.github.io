@@ -6,11 +6,11 @@ import GlobalStyle from "@/components/styles/GlobalStyle";
 import AppLayout from "@/components/AppLayout";
 import Page500 from "@/components/pages/error/Page500";
 import { darkTheme, lightTheme } from "@/constants/styles";
-import useThemeDetector from "@/hooks/useThemeDetector";
+import useSystemThemeDetector from "@/hooks/useSystemThemeDetector";
 import { ThemeKind } from "@/types/style";
 
 const App = () => {
-  const isSystemThemeDark = useThemeDetector();
+  const isSystemThemeDark = useSystemThemeDetector();
   const [currentTheme, setCurrentTheme] = useState<DefaultTheme>(isSystemThemeDark ? darkTheme : lightTheme);
 
   return (
@@ -19,7 +19,6 @@ const App = () => {
         <BrowserRouter>
           <GlobalStyle {...currentTheme} />
           <AppLayout
-            isDarkTheme={currentTheme.kind === ThemeKind.DARK}
             toggleTheme={() => setCurrentTheme(currentTheme.kind === ThemeKind.DARK ? lightTheme : darkTheme)}
           />
         </BrowserRouter>

@@ -9,6 +9,7 @@ const { Title } = Typography;
 const StyledQuote = styled(Title)`
   color: ${props => props.theme.color.font.primary} !important;
   text-align: center;
+  font-style: italic;
 `;
 
 const config: WordCloudConfig = {
@@ -19,7 +20,7 @@ const config: WordCloudConfig = {
   imageMask: samImage,
   wordStyle: {
     fontFamily: "Verdana",
-    fontSize: [8, 32]
+    fontSize: [10, 36]
   }
 };
 

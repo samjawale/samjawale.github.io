@@ -5,9 +5,9 @@ export const lightTheme: DefaultTheme = {
   kind: ThemeKind.LIGHT,
   fontFamily: "Helvetica Neue",
   color: {
-    background: { primary: "#ffffff", secondary: "#808080" },
-    border: { primary: "rgba(0, 0, 0, 0.85)", secondary: "rgba(0, 0, 0, 0.85)" },
-    font: { primary: "rgba(0, 0, 0, 0.85)", secondary: "#a9abaa" }
+    background: { primary: "#ffffff", secondary: "#D3D3D3" },
+    border: { primary: "#000000", secondary: "#000000" },
+    font: { primary: "#000000", secondary: "#a9abaa" }
   }
 };
 

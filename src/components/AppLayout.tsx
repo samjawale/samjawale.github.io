@@ -22,7 +22,6 @@ const StyledContent = styled(Layout.Content)`
 `;
 
 type Props = {
-  isDarkTheme: boolean;
   toggleTheme: () => void;
 };
 const AppLayout = (props: Props) => {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useThemeDetector = () => {
+const useSystemThemeDetector = () => {
   const getCurrentTheme = () => window.matchMedia("(prefers-color-scheme: dark)").matches;
   const [isDarkTheme, setIsDarkTheme] = useState(getCurrentTheme());
   const mqListener = (e: MediaQueryListEvent) => {
@@ -15,4 +15,4 @@ const useThemeDetector = () => {
   return isDarkTheme;
 };
 
-export default useThemeDetector;
+export default useSystemThemeDetector;
