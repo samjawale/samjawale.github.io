@@ -7,7 +7,7 @@ import { faCode, faFile, faHome, faMoon, faSun, faUser, faUserTie } from "@forta
 import { ReactComponent as BatmanSvg } from "@/art/icons/batman.svg";
 import { GithubProfileBtn, LinkedInProfileBtn, YoutubeProfileBtn } from "@/components/header/ProfileButton";
 import { PATH } from "@/constants/routes";
-import useCurrentThemeDetector from "@/hooks/useCurrentThemeDetector";
+import { ThemeKind } from "@/types/style";
 
 const { Title } = Typography;
 
@@ -28,7 +28,7 @@ const Header = ({ toggleTheme }: Props) => {
   const location = useLocation();
   const navigate = useNavigate();
   const currentTheme = useTheme();
-  const isCurrentThemeDark = useCurrentThemeDetector();
+  const isCurrentThemeDark = currentTheme.kind === ThemeKind.DARK;
 
   const headerLogo = isCurrentThemeDark ? (
     <Icon component={() => <BatmanSvg fill="#ffffff" width={150} height={40} />} />
