@@ -1,6 +1,6 @@
 import { Tabs } from "antd";
 import { useTheme } from "styled-components";
-import { Document } from "react-pdf/dist/esm/entry.webpack5";
+import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
 
 const Files = () => {
   const currentTheme = useTheme();
@@ -18,7 +18,11 @@ const Files = () => {
         {
           label: "Resume",
           key: "resume",
-          children: <Document file="./resume.pdf" />
+          children: (
+            <Document file="resume.pdf">
+              <Page pageNumber={1} />
+            </Document>
+          )
         }
       ]}
     />

@@ -1,0 +1,4 @@
+.react-pdf__Page__textContent,
+.react-pdf__Page__annotations {
+  display: none;
+}

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Typography } from "antd";
 import { WordCloud, WordCloudConfig } from "@ant-design/plots";
 import { skillData } from "./skillData";
-import samImage from "@/art/images/sam.png";
+import samImage from "@/assets/images/sam.png";
 
 const { Title } = Typography;
 
