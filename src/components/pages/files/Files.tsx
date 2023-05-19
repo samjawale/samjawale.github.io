@@ -1,9 +1,10 @@
-import { Tabs } from "antd";
 import { useTheme } from "styled-components";
+import { Tabs } from "antd";
 import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
+import { LIGHT_THEME } from "@/constants/styles";
 
 const Files = () => {
-  const currentTheme = useTheme();
+  const currentTheme = useTheme() || LIGHT_THEME;
 
   return (
     <Tabs

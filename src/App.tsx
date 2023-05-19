@@ -5,13 +5,13 @@ import { DefaultTheme, ThemeProvider } from "styled-components";
 import GlobalStyle from "@/components/styles/GlobalStyle";
 import AppLayout from "@/components/AppLayout";
 import Page500 from "@/components/pages/error/Page500";
-import { darkTheme, lightTheme } from "@/constants/styles";
+import { DARK_THEME, LIGHT_THEME } from "@/constants/styles";
 import useSystemThemeDetector from "@/hooks/useSystemThemeDetector";
 import { ThemeKind } from "@/types/style";
 
 const App = () => {
   const isSystemThemeDark = useSystemThemeDetector();
-  const [currentTheme, setCurrentTheme] = useState<DefaultTheme>(isSystemThemeDark ? darkTheme : lightTheme);
+  const [currentTheme, setCurrentTheme] = useState<DefaultTheme>(isSystemThemeDark ? DARK_THEME : LIGHT_THEME);
 
   return (
     <ErrorBoundary FallbackComponent={Page500}>
@@ -19,7 +19,7 @@ const App = () => {
         <BrowserRouter>
           <GlobalStyle {...currentTheme} />
           <AppLayout
-            toggleTheme={() => setCurrentTheme(currentTheme.kind === ThemeKind.DARK ? lightTheme : darkTheme)}
+            toggleTheme={() => setCurrentTheme(currentTheme.kind === ThemeKind.DARK ? LIGHT_THEME : DARK_THEME)}
           />
         </BrowserRouter>
       </ThemeProvider>

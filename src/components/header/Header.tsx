@@ -8,6 +8,7 @@ import { ReactComponent as BatmanSvg } from "@/assets/icons/batman.svg";
 import { GithubProfileBtn, LinkedInProfileBtn, YoutubeProfileBtn } from "@/components/header/ProfileButton";
 import { PATH } from "@/constants/routes";
 import { ThemeKind } from "@/types/style";
+import { LIGHT_THEME } from "@/constants/styles";
 
 const { Title } = Typography;
 
@@ -27,7 +28,7 @@ type Props = {
 const Header = ({ toggleTheme }: Props) => {
   const location = useLocation();
   const navigate = useNavigate();
-  const currentTheme = useTheme();
+  const currentTheme = useTheme() || LIGHT_THEME;
   const isCurrentThemeDark = currentTheme.kind === ThemeKind.DARK;
 
   const headerLogo = isCurrentThemeDark ? (

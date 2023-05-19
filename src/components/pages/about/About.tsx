@@ -1,16 +1,28 @@
-import { Col, Row, Statistic, Timeline } from "antd";
-import styled, { useTheme } from "styled-components";
+import styled from "styled-components";
+import { Timeline } from "antd";
+
+const { Item } = Timeline;
+
+const StyledTimeline = styled(Timeline)`
+  .ant-timeline-item-label,
+  .ant-timeline-item-content {
+    color: ${props => props.theme.color.font.primary};
+  }
+  .ant-timeline-item-tail {
+    border-color: ${props => props.theme.color.border.primary};
+  }
+`;
+
+const StyledTimelineItem = styled(Item)``;
 
 const About = () => {
   return (
-    <>
-      <Timeline mode="left">
-        <Timeline.Item label="2015-09-01">Create a services</Timeline.Item>
-        <Timeline.Item label="2015-09-01 09:12:11">Solve initial network problems</Timeline.Item>
-        <Timeline.Item>Technical testing</Timeline.Item>
-        <Timeline.Item label="2015-09-01 09:12:11">Network problems being solved</Timeline.Item>
-      </Timeline>
-    </>
+    <StyledTimeline mode="left">
+      <StyledTimelineItem label="2015-09-01">Create a services</StyledTimelineItem>
+      <StyledTimelineItem label="2015-09-01 09:12:11">Solve initial network problems</StyledTimelineItem>
+      <StyledTimelineItem>Technical testing</StyledTimelineItem>
+      <StyledTimelineItem label="2015-09-01 09:12:11">Network problems being solved</StyledTimelineItem>
+    </StyledTimeline>
   );
 };
 

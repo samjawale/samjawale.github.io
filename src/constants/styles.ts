@@ -1,7 +1,7 @@
 import { DefaultTheme } from "styled-components";
 import { ThemeKind } from "@/types/style";
 
-export const lightTheme: DefaultTheme = {
+export const LIGHT_THEME: DefaultTheme = {
   kind: ThemeKind.LIGHT,
   fontFamily: "Helvetica Neue",
   color: {
@@ -11,11 +11,11 @@ export const lightTheme: DefaultTheme = {
   }
 };
 
-export const darkTheme: DefaultTheme = {
-  ...lightTheme,
+export const DARK_THEME: DefaultTheme = {
+  ...LIGHT_THEME,
   kind: ThemeKind.DARK,
   color: {
-    ...lightTheme.color,
+    ...LIGHT_THEME.color,
     background: { primary: "#001529", secondary: "#808080" },
     border: { primary: "#ffffff", secondary: "#ffffff" },
     font: { primary: "#ffffff", secondary: "#a9abaa" }
