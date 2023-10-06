@@ -1,76 +1,22 @@
-import { WordCloudConfig } from "@ant-design/plots";
+import { Props } from "react-wordcloud";
 
-export const skillData: WordCloudConfig["data"] = [
-  {
-    score: 8,
-    skill: "Python"
-  },
-  {
-    score: 8,
-    skill: "React"
-  },
-  {
-    score: 7,
-    skill: "Go"
-  },
-  {
-    score: 7,
-    skill: "Java"
-  },
-  {
-    score: 8,
-    skill: "Javascript"
-  },
-  {
-    score: 8,
-    skill: "TypeScript"
-  },
-  {
-    score: 7,
-    skill: "HTML"
-  },
-  {
-    score: 7,
-    skill: "CSS"
-  },
-  {
-    score: 7,
-    skill: "MySQL"
-  },
-  {
-    score: 7,
-    skill: "PostgresSQL"
-  },
-  {
-    score: 7,
-    skill: "gRPC"
-  },
-  {
-    score: 5,
-    skill: "GraphQL"
-  },
-  {
-    score: 8,
-    skill: "Cloud computing"
-  },
-  {
-    score: 7,
-    skill: "Git"
-  },
-  {
-    score: 7,
-    skill: "Jira"
-  },
-  {
-    score: 7,
-    skill: "Jenkins"
-  },
-  {
-    score: 7,
-    skill: "AWS S3"
-  },
-  {
-    score: 6,
-    skill: "AWS EC2"
-  }
+export const wordCloudWords: Props["words"] = [
+  { value: 8, text: "Python" },
+  { value: 8, text: "React" },
+  { value: 7, text: "Go" },
+  { value: 7, text: "Java" },
+  { value: 8, text: "Javascript" },
+  { value: 8, text: "TypeScript" },
+  { value: 7, text: "HTML" },
+  { value: 7, text: "CSS" },
+  { value: 7, text: "MySQL" },
+  { value: 7, text: "PostgresSQL" },
+  { value: 7, text: "gRPC" },
+  { value: 5, text: "GraphQL" },
+  { value: 8, text: "Cloud computing" },
+  { value: 7, text: "Git" },
+  { value: 7, text: "Jira" },
+  { value: 7, text: "Jenkins" },
+  { value: 7, text: "AWS S3" },
+  { value: 6, text: "AWS EC2" }
 ];

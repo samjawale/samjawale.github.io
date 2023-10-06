@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { Typography } from "antd";
-import { WordCloud, WordCloudConfig } from "@ant-design/plots";
-import { skillData } from "./skillData";
-import samImage from "@/assets/images/sam.png";
+import WordCloud from "react-wordcloud";
+import { wordCloudWords } from "./skillData";
+// import samImage from "@/assets/images/sam.png";
 
 const { Title } = Typography;
 
@@ -12,18 +12,6 @@ const StyledQuote = styled(Title)`
   font-style: italic;
 `;
 
-const config: WordCloudConfig = {
-  data: skillData,
-  wordField: "skill",
-  weightField: "score",
-  colorField: "skill",
-  imageMask: samImage,
-  wordStyle: {
-    fontFamily: "Verdana",
-    fontSize: [10, 36]
-  }
-};
-
 const Home = () => {
   return (
     <>
@@ -32,7 +20,7 @@ const Home = () => {
         well-documented code. I enjoy working collaboratively but can also run projects independently. I always have
         been known as a quick leaner and a fast developer."
       </StyledQuote>
-      <WordCloud {...config} />
+      <WordCloud options={{ fontSizes: [10, 36] }} words={wordCloudWords} />
     </>
   );
 };

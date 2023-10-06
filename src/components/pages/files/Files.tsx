@@ -1,7 +1,9 @@
 import { useTheme } from "styled-components";
+import { pdfjs, Document, Page } from "react-pdf";
 import { Tabs } from "antd";
-import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
 import { LIGHT_THEME } from "@/constants/styles";
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL("pdfjs-dist/build/pdf.worker.min.js", import.meta.url).toString();
 
 const Files = () => {
   const currentTheme = useTheme() || LIGHT_THEME;
