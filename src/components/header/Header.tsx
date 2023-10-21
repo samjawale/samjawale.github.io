@@ -4,7 +4,7 @@ import { Col, Layout, Menu, Row, Space, Switch, Typography } from "antd";
 import Icon from "@ant-design/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faFile, faHome, faMoon, faSun, faUser, faUserTie } from "@fortawesome/free-solid-svg-icons";
-import { ReactComponent as BatmanSvg } from "@/assets/icons/batman.svg";
+import BatmanSvg from "@/assets/icons/batman.svg?react";
 import { GithubProfileBtn, LinkedInProfileBtn, YoutubeProfileBtn } from "@/components/header/ProfileButton";
 import { PATH } from "@/constants/routes";
 import { ThemeKind } from "@/types/style";
