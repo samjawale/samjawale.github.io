@@ -15,7 +15,6 @@ const StyledLayout = styled(Layout)`
 `;
 
 const StyledContent = styled(Layout.Content)`
-  /* margin: auto; */
   padding: 50px;
   overflow: auto;
   background: ${props => props.theme.color.background.primary};
